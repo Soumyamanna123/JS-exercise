@@ -106,4 +106,139 @@ account.deposit(800)
 account.displaybalance()
 account.withdraw(2500)
 
+//Q5: Write a JavaScript program that creates a class called 'Shape' with a method to calculate the area. Create two subclasses, 'Circle' and 'Triangle', that inherit from the 'Shape' class and override the area calculation method. Create an instance of the 'Circle' class and calculate its area. Similarly, do the same for the 'Triangle' class.
+class engine{
+    constructor(cc){
+        this.cc=cc;
+    }
 
+    enginedetails(){
+        return `This is ${this.cc < 150 ? "Platina" : this.cc < 350 ? "Dominor" : this.cc <650 ? "RE" : "Triumph"}`
+    }
+    
+}
+ class vehicle extends engine{
+    constructor(wheel,cc){
+        super(cc);
+        this.wheel=wheel;
+
+    }
+
+    generatevehicle(){
+        return `${super.enginedetails()}   ${this.wheel == 2 ? "Bike" : this.wheel==4 ?"Car" : ""  }`; 
+    }
+ }
+
+ const V= new vehicle(5,700,0)
+ console.log(V.generatevehicle());
+
+
+ // Q6: Write a JavaScript program that creates a class called 'Shape' with a method to calculate the area. Create two subclasses, 'Circle' and 'Triangle', that inherit from the 'Shape' class and override the area calculation method. Create an instance of the 'Circle' class and calculate its area. Similarly, do the same for the 'Triangle' class.
+
+ class Shape{
+    calculatearea(){
+       
+    }
+ }
+
+ class Circle extends Shape{
+    constructor(radious){
+        super();
+        this.radious=radious
+    }
+    
+    calculatearea(){
+        return Math.PI * this.radious* this.radious;
+    }
+ }
+
+ class Triangle extends Shape{
+     constructor(height,width){
+        super();
+        this.height=height;
+        this.width=width;
+
+        
+     }
+     calculatearea(){
+        return this.height * this.width;
+     }
+ }
+
+ const c= new Circle(3);
+ console.log("Area of circle is: " +c.calculatearea())
+ const t =new Triangle(4,5)
+ console.log("Area of triangle is: " +t.calculatearea())
+
+// Q7:  Write a JavaScript program that creates a class `Book` with properties for title, author, and publication year. Include a method to display book details. Create a subclass called 'Ebook' that inherits from the 'Book' class and includes an additional property for book price. Override the display method to include the book price. Create an instance of the 'Ebook' class and display its details.
+
+class Book{
+    constructor(title,author,publicationyear){
+        this.title=title;
+        this.author=author;
+        this.publicationyear=publicationyear;
+    }
+
+    displaybookdetails(){
+        console.log(`Title: ${this.title}`);
+        console.log(`Author: ${this.author}`);
+        console.log(`Publication Year: ${this.publicationyear}`);
+    }    
+}
+
+class Ebook extends Book{
+    constructor(title,author,publicationyear,price){
+        super(title,author,publicationyear);
+        this.price=price;
+    }
+
+    displaybookdetails(){
+        super.displaybookdetails();
+        console.log(`Price: ${this.price}`);
+    }
+}
+
+const b= new Ebook ('Don Quixote', 'Miguel de Cervantes', 1605, 21.49);
+b.displaybookdetails();
+
+//Q8: Write a JavaScript program that creates a class called 'Animal' with properties for species and sound. Include a method to make the animal's sound. Create a subclass called 'Dog' that inherits from the 'Animal' class and adds an additional property for color. Override the make sound method to include the dog's color. Create an instance of the 'Dog' class and make it make its sound.
+
+class Animal {
+    constructor(species,sound){
+        this.species=species
+        this.sound=sound
+    }
+    animalsound(){
+        console.log(`Sound: ${this.sound}`)
+    }
+}
+class Dog extends Animal{
+    constructor(species,sound,color){
+        super(species,sound)
+        this.color=color;
+    }
+    animalsound(){
+        super.animalsound()
+        console.log(`Color: ${this.color}`)
+    }
+}
+const d= new Dog(`Dog`,` bark`, `Red`)
+d.animalsound()
+
+//Q9:  Write a JavaScript program that creates a class called Bank with properties for bank names and branches. Include methods to add a branch, remove a branch, and display all branches. Create an instance of the Bank class and perform operations to add and remove branches.
+
+ class bank{
+    constructor(banknames,branches){
+        this.banknames=banknames;
+        this.branches=[];
+    }
+    addbranch(branch){
+        this.branches.push(branch);
+    }
+    removebranch(){
+
+    }
+    dispalyallbranch(){
+
+    }
+ }
