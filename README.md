@@ -1,1 +1,1 @@
-This IS javascript topic wise practice set.
+/ This IS javascript topic wise practice set.
