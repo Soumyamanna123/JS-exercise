@@ -30,7 +30,7 @@ f();
   const obj ={
     a: 10,
     b: ()=>{
-        console.log(this)
+        console.log(a)
     }
   }
   obj.b();
@@ -45,10 +45,10 @@ const nestedarrow ={
 
 // output based question: Q1
 const object = {
-    message: 'Hello, World!',
+    message: ' Hello, World!',
   
     getMessage() {
-      const message = 'Hello, Earth!';  // This is a local variable.
+      const message = ' Hello, Earth!';  // This is a local variable.
       return this.message;  // `this` refers to the object, so it accesses `object.message`.
     }
   };
@@ -58,7 +58,7 @@ const object = {
 
   // output based question: Q2
   const object1 = {
-    message: 'Hello, World!',
+    message: '2. Hello, World!',
   
     logMessage() {
       console.log(this.message); // What is logged?
@@ -66,3 +66,28 @@ const object = {
   };
   
   setTimeout(object1.logMessage, 4000); //undefined
+
+  const person = {
+    name: "Alice",
+    greet:function()  {
+      setTimeout(() => {
+        console.log(`Hello, ${this.name}`);
+      }, 1000);
+    }
+  };
+  
+  person.greet();
+
+  //4
+
+  const obj1 = {
+    value: 5,
+    increment: function() {
+      const arrowFunction = () => {
+        console.log(this.value);
+      };
+      arrowFunction();
+    }
+  };
+  
+  obj1.increment();
