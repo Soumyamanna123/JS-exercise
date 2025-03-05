@@ -71,7 +71,7 @@ const object = {
     name: "Alice",
     greet:function()  {
       setTimeout(() => {
-        console.log(`Hello, ${this.name}`);
+        console.log(`Helloo, ${this.name}`);
       }, 1000);
     }
   };
