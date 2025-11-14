@@ -79,7 +79,7 @@ const object = {
   person.greet();
 
   //4
-
+  
   const obj1 = {
     value: 5,
     increment: function() {

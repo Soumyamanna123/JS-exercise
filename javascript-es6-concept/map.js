@@ -26,6 +26,10 @@ function uppercase(fruit){
 const uppercaseoffruit = fruits.map(uppercase)
 console.log (uppercaseoffruit)
 
+
+
+
+
 //4
 const users = [
     { firstName: 'John', lastName: 'Doe' },
@@ -37,6 +41,11 @@ function fullname (user){
 }
 const printfullname = users.map(fullname)
 console.log (printfullname)
+
+
+
+
+
 
 //5.
 const names = ['Alice', 'Bob', 'Charlie'];
@@ -60,3 +69,10 @@ console.log (printnames)
 //   }
 //   const printpeoplenamewithage = people.map (printnamewithage)
 //   console.log (printpeoplenamewithage)
+
+const digits= [1,2,2,4,5,6,7]
+
+function doublethedigits = digits.map(function (nums){
+ return nums*2;
+})
+console.log (doublethedigits)

@@ -36,3 +36,4 @@ console.log ("truee")
 console.log(Number(false));  // Output: 1
 
   
+

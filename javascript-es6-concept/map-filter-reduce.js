@@ -36,3 +36,24 @@ console.log(output3)
 
 
 //reduce functionl
+
+const nums = [5, 10, 15];
+
+const result= nums.reduce((sum,num)=>{
+return sum+num
+},0)
+
+console.log(result)
+
+
+
+const fruits = ["apple", "banana", "apple", "orange", "apple"];
+
+const applecount= fruits.reduce((initialfruit, currentfruit )=>{
+if(currentfruit=="apple"){
+    return initialfruit + 1; 
+}
+return initialfruit ; 
+
+},0) 
+console.log(applecount)
